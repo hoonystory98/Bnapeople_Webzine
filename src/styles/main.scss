@@ -1,0 +1,23 @@
+.TitleHr{
+    width: 100vw;
+    color: #fff;
+}
+
+body{
+    background-color: #242424;
+    padding: .5vh 0;
+}
+
+#main-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 1rem;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

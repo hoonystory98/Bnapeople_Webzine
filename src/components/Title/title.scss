@@ -1,0 +1,44 @@
+.title-form{
+    background-color: pink;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 750px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 20px 0;
+    outline: 1px solid rgba(0,0,0,0);
+    transition: outline .5s ease-in-out;
+
+    &:hover{
+        outline: 1px solid red;
+
+        .button-group{
+            opacity: 100%;
+        }
+    }
+
+    .title-body{
+        font-family: 'Cute Font', cursive;
+        font-size: 5rem;
+        text-align: center;
+    }
+    .title-input{
+        height: 5rem;
+        font-size: 3rem;
+    }
+    .button-group{
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        justify-content: space-around;
+        width: 75%;
+        margin: 0 auto;
+        opacity: 0%;
+        transition: opacity .2s ease-in-out;
+    }
+}
