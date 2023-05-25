@@ -1,7 +1,11 @@
 #editor-section{
-    width: 36vw;
+    width: 80vw;
     height: 90vh;
     overflow-y: auto;
+
+    @media (min-width: 1024px) {
+      width: 1024px;
+    }
 }
 
 #editor-container{
