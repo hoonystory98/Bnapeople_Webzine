@@ -1,4 +1,4 @@
-.content-form-A{
+.content-form-B{
     background-color: palegreen;
     position: relative;
     display: flex;
@@ -24,18 +24,9 @@
         display: flex;
         flex-direction: row;
 
-        .content-image{
-            min-width: 320px;
-            min-height: 180px;
-            margin-right: 20px;
-            background-color: #fff;
-            background-size: cover;
-            background-position: center center;
-            box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-        }
         .content-text{
             display: flex;
-            flex-grow: 1;
+            width: 400px;
             font-size: 1.25rem;
             background-color: #fff;
             padding: 5px;
@@ -50,6 +41,17 @@
                 line-height: 1.5rem;
                 background-color: bisque;
             }
+        }
+        .content-image{
+            flex-grow: 1;
+            min-width: 240px;
+            min-height: 320px;
+            margin-left: 20px;
+            background-color: #fff;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
         }
     }
 

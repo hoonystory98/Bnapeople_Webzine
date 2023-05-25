@@ -1,10 +1,12 @@
 #editor-container{
     width: 95vw;
     height: 90vh;
-    background-color: #fff;
+    background-color: steelblue;
+    overflow-y: scroll;
     
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 

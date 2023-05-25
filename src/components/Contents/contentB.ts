@@ -1,17 +1,17 @@
-import './contentA.scss';
+import './contentB.scss';
 
-const ContentA = {
+const ContentB = {
   element: null,
   initialize: function() {
     this.element = document.createElement("section");
-    this.element.classList.add("content-form-A");
+    this.element.classList.add("content-form-B");
 
     this.element.innerHTML = `
       <section class="content-body">
-        <div class="content-image">
-        </div>
         <div class="content-text">
           내용입니다.
+        </div>
+        <div class="content-image">
         </div>
       </section>
       
@@ -98,5 +98,5 @@ const ContentA = {
   }
 };
 
-ContentA.initialize();
-export default ContentA;
+ContentB.initialize();
+export default ContentB;

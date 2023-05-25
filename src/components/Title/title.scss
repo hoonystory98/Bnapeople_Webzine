@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 750px;
     height: 100px;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 20px 0 10px;
     outline: 1px solid rgba(0,0,0,0);
     transition: outline .5s ease-in-out;
 
@@ -25,6 +26,7 @@
         font-family: 'Cute Font', cursive;
         font-size: 5rem;
         text-align: center;
+        white-space: nowrap;
     }
     .title-input{
         height: 5rem;

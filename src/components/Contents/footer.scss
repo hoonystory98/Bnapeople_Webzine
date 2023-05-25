@@ -1,0 +1,32 @@
+.bna-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: inset 0 10px 5px rgba(255,255,255,0.75), 0 5px 5px rgba(0,0,0,0.25);
+
+    .bna-logo{
+        width: 270px;
+        height: 60px;
+        margin: 10px;
+        background-image: url("../../images/bnapeople_logo.png");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .footer-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.8rem;
+
+        i{
+            color: #d68a32;
+        }
+    }
+}
