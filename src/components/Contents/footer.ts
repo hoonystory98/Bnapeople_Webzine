@@ -10,8 +10,8 @@ const Footer = {
       <section class="footer-contact">
         <p><i class="fa-solid fa-phone"></i> 전화번호 : 010-2833-3932</p>
         <p><i class="fa-solid fa-location-dot"></i> 주소 : 부산광역시 남구 천제등로 29, 지하 1층</p>
-        <p><i class="fa-solid fa-phone"></i> 전화번호 : 010-2833-3932</p>
-        <p><i class="fa-solid fa-location-dot"></i> 주소 : 부산광역시 남구 천제등로 29, 지하 1층</p>
+        <p><i class="fa-solid fa-fax"></i> 팩스 : 0504-135-3932</p>
+        <p><i class="fa-solid fa-building"></i> 주소 : 부산광역시 남구 수영로 196번길52</p>
         <p><i class="fa-solid fa-globe"></i> 홈페이지 : www.bnapeople.org</p>
         <p><i class="fa-solid fa-envelope"></i> 이메일 : bnapeople@naver.com</p>
       </section>
