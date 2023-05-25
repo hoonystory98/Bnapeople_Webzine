@@ -1,8 +1,9 @@
 import './contentD.scss';
 
 const ContentD = {
-  element: document.createElement("section"),
+    element: null as HTMLElement | null,
   initialize: function() {
+    this.element = document.createElement("section");
     this.element.classList.add("content-form-D");
 
     this.element.innerHTML = `

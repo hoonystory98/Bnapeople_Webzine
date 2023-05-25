@@ -1,8 +1,9 @@
 import './title.scss';
 
 const Title = {
-  element: document.createElement("section"),
+  element: null as HTMLElement | null,
   initialize: function() {
+    this.element = document.createElement("section");
     this.element.classList.add("title-form");
 
     this.element.innerHTML = `
@@ -41,9 +42,9 @@ const Title = {
         }
         else{
             if(titleBody){
-                const afterTitle = this.element.querySelector(".title-input") as HTMLTextAreaElement;
+                const afterTitle = this.element?.querySelector(".title-input") as HTMLTextAreaElement;
                 titleBody.innerHTML=`<h2 class="title-text">${(afterTitle?.value.length === 0)?(titleBody.querySelector(".title-input")?.getAttribute("placeholder")):(afterTitle?.value)}</h2>`;
-                targetTitle=this.element.querySelector(".title-text") as HTMLElement;
+                targetTitle=this.element?.querySelector(".title-text") as HTMLElement;
             }
             modifyButton.innerHTML="수정";
         }

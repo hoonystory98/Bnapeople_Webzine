@@ -1,8 +1,9 @@
 import './contentA.scss';
 
 const ContentA = {
-  element: document.createElement("section"),
+  element: null as HTMLElement | null,
   initialize: function() {
+    this.element = document.createElement("section");
     this.element.classList.add("content-form-A");
 
     this.element.innerHTML = `
@@ -89,10 +90,10 @@ const ContentA = {
         }
         else{
             if(contentText){
-                const afterText = this.element.querySelector(".text-input") as HTMLTextAreaElement;
+                const afterText = this.element?.querySelector(".text-input") as HTMLTextAreaElement;
                 const brAfterText: string = afterText?.value.trim().replace(/\n/g,"<br />");
                 contentText.innerHTML=brAfterText;
-                contentText=this.element.querySelector(".content-text") as HTMLElement;
+                contentText=this.element?.querySelector(".content-text") as HTMLElement;
             }
             modifyButton.innerHTML="수정";
         }
