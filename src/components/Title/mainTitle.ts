@@ -1,9 +1,8 @@
 import './mainTitle.scss';
 
 const MainTitle = {
-  element: null,
+  element: document.createElement("header"),
   initialize: function() {
-    this.element = document.createElement("header");
     this.element.classList.add("bna-header");
 
     const todayDate = new Date();

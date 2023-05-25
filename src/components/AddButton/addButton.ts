@@ -6,9 +6,8 @@ import ContentC from '../Contents/contentC';
 import ContentD from '../Contents/contentD';
 
 const addButton = {
-  element: null,
+  element: document.createElement("section"),
   initialize: function() {
-    this.element = document.createElement("section");
     this.element.classList.add("add-button");
 
     this.element.innerHTML = `

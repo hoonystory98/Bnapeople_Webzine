@@ -1,9 +1,8 @@
 import './contentD.scss';
 
 const ContentD = {
-  element: null,
+  element: document.createElement("section"),
   initialize: function() {
-    this.element = document.createElement("section");
     this.element.classList.add("content-form-D");
 
     this.element.innerHTML = `
@@ -17,7 +16,7 @@ const ContentD = {
         <button class="delete-button">삭제</button>
       </div>`;
 
-    const contentImage = this.element.querySelector(".content-image");
+    const contentImage = this.element.querySelector(".content-image") as HTMLElement;
     const buttonGroup = this.element.querySelector(".button-group");
     const uploadButton = buttonGroup?.querySelector(".upload-button");
     const deleteButton = buttonGroup?.querySelector(".delete-button");
@@ -53,7 +52,7 @@ const ContentD = {
       fileInput.click();
     })
 
-    deleteButton?.addEventListener("click",(e)=>{
+    deleteButton?.addEventListener("click",()=>{
         this.element?.remove();
     })
   },

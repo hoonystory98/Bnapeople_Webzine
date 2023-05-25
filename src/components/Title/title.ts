@@ -1,9 +1,8 @@
 import './title.scss';
 
 const Title = {
-  element: null,
+  element: document.createElement("section"),
   initialize: function() {
-    this.element = document.createElement("section");
     this.element.classList.add("title-form");
 
     this.element.innerHTML = `
@@ -24,16 +23,16 @@ const Title = {
     const buttonGroup = this.element.querySelector(".button-group")
     const modifyButton = buttonGroup?.querySelector(".modi-button");
     const deleteButton = buttonGroup?.querySelector(".delete-button");
-    let targetTitle = this.element.querySelector(".title-text");
+    let targetTitle = this.element.querySelector(".title-text") as HTMLElement;
 
     buttonGroup?.addEventListener("click",(e)=>{
-        const targetButton = e.target.closest(".font-button");
+        const targetButton = (e.target as Element)?.closest(".font-button");
         if(targetButton){
-          targetTitle.style.fontFamily = targetButton.getAttribute("data-font");
+          targetTitle.style.fontFamily = targetButton.getAttribute("data-font") ?? "";
         }
     })
 
-    modifyButton?.addEventListener("click", (e)=>{
+    modifyButton?.addEventListener("click", ()=>{
         if(modifyButton.textContent==="수정"){
             if(titleBody){
                 titleBody.innerHTML=`<input type="text" class="title-input" placeholder="${targetTitle?.textContent}"/>`;
@@ -42,15 +41,15 @@ const Title = {
         }
         else{
             if(titleBody){
-                const afterTitle = this.element.querySelector(".title-input");
+                const afterTitle = this.element.querySelector(".title-input") as HTMLTextAreaElement;
                 titleBody.innerHTML=`<h2 class="title-text">${(afterTitle?.value.length === 0)?(titleBody.querySelector(".title-input")?.getAttribute("placeholder")):(afterTitle?.value)}</h2>`;
-                targetTitle=this.element.querySelector(".title-text");
+                targetTitle=this.element.querySelector(".title-text") as HTMLElement;
             }
             modifyButton.innerHTML="수정";
         }
     })
 
-    deleteButton?.addEventListener("click",(e)=>{
+    deleteButton?.addEventListener("click",()=>{
         this.element?.remove();
     })
   },

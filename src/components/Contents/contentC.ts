@@ -1,9 +1,8 @@
 import './contentC.scss';
 
 const ContentC = {
-  element: null,
+  element: document.createElement("section"),
   initialize: function() {
-    this.element = document.createElement("section");
     this.element.classList.add("content-form-C");
 
     this.element.innerHTML = `
@@ -26,21 +25,21 @@ const ContentC = {
     const buttonGroup = this.element.querySelector(".button-group");
     const modifyButton = buttonGroup?.querySelector(".modi-button");
     const deleteButton = buttonGroup?.querySelector(".delete-button");
-    let contentText = this.element.querySelector(".content-text");
+    let contentText = this.element.querySelector(".content-text") as HTMLElement;
     let contentInput: HTMLTextAreaElement;
 
     buttonGroup?.addEventListener("click",(e)=>{
-        const targetButton = e.target.closest(".font-button");
+        const targetButton = (e.target as Element)?.closest(".font-button");
         if(targetButton){
-          contentText.style.fontFamily = targetButton.getAttribute("data-font");
+          contentText.style.fontFamily = targetButton.getAttribute("data-font") ?? "";
         }
     })
 
-    modifyButton?.addEventListener("click", (e)=>{
+    modifyButton?.addEventListener("click", ()=>{
         if(modifyButton.textContent==="수정"){
             if(contentText){
                 contentText.innerHTML=`<textarea class="text-input" rows=1 />`;
-                contentInput = contentText?.querySelector(".text-input");
+                contentInput = contentText?.querySelector(".text-input") as HTMLTextAreaElement;
                 contentInput?.addEventListener("input",()=>{
                     contentInput.style.height='auto';
                     contentInput.style.height=contentInput.scrollHeight + 'px';
@@ -50,16 +49,16 @@ const ContentC = {
         }
         else{
             if(contentText){
-                const afterText = this.element.querySelector(".text-input");
+                const afterText = this.element.querySelector(".text-input") as HTMLTextAreaElement;
                 const brAfterText: string = afterText?.value.trim().replace(/\n/g,"<br />");
                 contentText.innerHTML=brAfterText;
-                contentText=this.element.querySelector(".content-text");
+                contentText=this.element.querySelector(".content-text") as HTMLElement;
             }
             modifyButton.innerHTML="수정";
         }
     })
 
-    deleteButton?.addEventListener("click",(e)=>{
+    deleteButton?.addEventListener("click",()=>{
         this.element?.remove();
     })
   },

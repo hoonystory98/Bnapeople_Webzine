@@ -39,7 +39,7 @@ document.querySelector("#editor-container")?.appendChild(bnaFooter.getElement())
 const hideButton=document.querySelector("#hide-button");
 const changeImage=document.querySelector("#change-image");
 const screenShot=document.querySelector("#screen-shot");
-const backGround:HTMLDivElement=document.querySelector("#editor-background");
+const backGround=document.querySelector("#editor-background") as HTMLElement;
 const githubLink=document.querySelector("#github-link");
 
 hideButton?.addEventListener("click",()=>{
@@ -92,7 +92,7 @@ function captureScrollableElementAsImage(element:HTMLElement, fileName:string) {
 }
 
 screenShot?.addEventListener("click",()=>{
-  const targetForCapture=document.querySelector("#editor-container");
+  const targetForCapture=document.querySelector("#editor-container") as HTMLElement;
   const fileName="웹진캡쳐";
   if(targetForCapture){
     captureScrollableElementAsImage(targetForCapture,fileName);
