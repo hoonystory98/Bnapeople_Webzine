@@ -1,5 +1,5 @@
 .content-form-B{
-    background-color: palegreen;
+    background-color: rgba(255,255,255,0.5);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,6 @@
     border-radius: 10px;
     margin: 5px 0;
     outline: 1px solid rgba(0,0,0,0);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     transition: outline .5s ease-in-out;
 
     &:hover{
@@ -28,10 +27,10 @@
             display: flex;
             width: 400px;
             font-size: 1.25rem;
-            background-color: #fff;
             padding: 5px;
             line-height: 1.5rem;
             align-items: center;
+            word-break: break-all;
 
             textarea{
                 resize: none;
@@ -39,19 +38,25 @@
                 flex-grow: 1;
                 font-size: 1.25rem;
                 line-height: 1.5rem;
-                background-color: bisque;
+                background-color: lightgray;
             }
         }
-        .content-image{
-            flex-grow: 1;
-            min-width: 240px;
+        .content-image-frame{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 280px;
             min-height: 320px;
-            margin-left: 20px;
             background-color: #fff;
+            margin-left: 20px;
+            box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5),2px 2px 2px rgba(0,0,0,0.5);
+        }
+        .content-image{
+            width: 99%;
+            height: 99%;
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
         }
     }
 

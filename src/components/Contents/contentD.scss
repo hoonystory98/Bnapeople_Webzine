@@ -1,10 +1,10 @@
-.content-form-C{
+.content-form-D{
     background-color: rgba(255,255,255,0.5);
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 750px;
-    padding: 20px 15px;
+    width: 640px;
+    padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
     margin: 5px 0;
@@ -22,26 +22,15 @@
     .content-body{
         display: flex;
         flex-direction: row;
-        
-        .content-text{
-            display: flex;
-            flex-grow: 1;
-            font-size: 1.5rem;
-            padding: 5px;
-            line-height: 1.5rem;
-            text-align: center;
-            justify-content: center;
-            word-break: break-all;
 
-            textarea{
-                resize: none;
-                border: none;
-                flex-grow: 1;
-                font-size: 1.25rem;
-                line-height: 1.5rem;
-                text-align: center;
-                background-color: lightgray;
-            }
+        .content-image{
+            flex-grow: 1;
+            min-width: 480px;
+            min-height: 270px;
+            background-color: #fff;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
     }
 

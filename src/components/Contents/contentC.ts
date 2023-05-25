@@ -15,11 +15,11 @@ const ContentC = {
       
       <div class="button-group">
         <button class="modi-button">수정</button>
-        <button class="font-button" data-font="'Black Han Sans', sans-serif">글꼴A</button>
-        <button class="font-button" data-font="'Cute Font', cursive">글꼴B</button>
-        <button class="font-button" data-font="'Dokdo', cursive">글꼴C</button>
-        <button class="font-button" data-font="'Dongle', sans-serif">글꼴D</button>
-        <button class="font-button" data-font="'East Sea Dokdo', cursive">글꼴E</button>
+        <button class="font-button" data-font="'Gaegu', cursive">글꼴A</button>
+        <button class="font-button" data-font="'Gamja Flower', cursive">글꼴B</button>
+        <button class="font-button" data-font="'Hi Melody', cursive">글꼴C</button>
+        <button class="font-button" data-font="'Nanum Brush Script', cursive">글꼴D</button>
+        <button class="font-button" data-font="'Dokdo', cursive">글꼴E</button>
         <button class="delete-button">삭제</button>
       </div>`;
 
@@ -29,12 +29,12 @@ const ContentC = {
     let contentText = this.element.querySelector(".content-text");
     let contentInput: HTMLTextAreaElement;
 
-    // buttonGroup?.addEventListener("click",(e)=>{
-    //     const targetButton = e.target.closest(".font-button");
-    //     if(targetButton){
-    //       targetTitle.style.fontFamily = targetButton.getAttribute("data-font");
-    //     }
-    // })
+    buttonGroup?.addEventListener("click",(e)=>{
+        const targetButton = e.target.closest(".font-button");
+        if(targetButton){
+          contentText.style.fontFamily = targetButton.getAttribute("data-font");
+        }
+    })
 
     modifyButton?.addEventListener("click", (e)=>{
         if(modifyButton.textContent==="수정"){

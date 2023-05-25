@@ -14,6 +14,7 @@ const Footer = {
         <p><i class="fa-solid fa-globe"></i> 홈페이지 : www.bnapeople.org</p>
         <p><i class="fa-solid fa-envelope"></i> 이메일 : bnapeople@naver.com</p>
       </section>
+      <p class="madeBy">Powered by hoonystory98</p>
     `;
   },
   getElement: function() {
