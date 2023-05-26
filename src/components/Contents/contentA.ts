@@ -12,9 +12,7 @@ const ContentA = {
           <div class="content-image">
           </div>
         </div>
-        <div class="content-text">
-          내용입니다.
-        </div>
+        <div class="content-text">내용입니다.</div>
       </section>
       
       <div class="button-group">
@@ -79,8 +77,10 @@ const ContentA = {
     modifyButton?.addEventListener("click", ()=>{
         if(modifyButton.textContent==="수정"){
             if(contentText){
-                contentText.innerHTML=`<textarea class="text-input" rows=1 />`;
+                contentText.innerHTML=`<textarea class="text-input" rows=1>${contentText.innerHTML?.replace(/\<br\>/g,"\n")}</textarea>`;
                 contentInput = contentText?.querySelector(".text-input") as HTMLTextAreaElement;
+                contentInput.style.height='auto';
+                contentInput.style.height=contentInput.scrollHeight + 'px';
                 contentInput?.addEventListener("input",()=>{
                     contentInput.style.height='auto';
                     contentInput.style.height=contentInput.scrollHeight + 'px';
