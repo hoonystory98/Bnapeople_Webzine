@@ -9,7 +9,7 @@ const MainTitle = {
 
     this.element.innerHTML = `
       <h1>빛을 나누는 사람들</h1>
-      <h3>${todayDate.getMonth() + 1}월호 웹진</h3>
+      <h3>${todayDate.getMonth()}월호 웹진</h3>
     `;
   },
   getElement: function() {

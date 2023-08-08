@@ -22,7 +22,7 @@ const ContentA = {
         <button class="font-button" data-font="'Gamja Flower', cursive">글꼴B</button>
         <button class="font-button" data-font="'Hi Melody', cursive">글꼴C</button>
         <button class="font-button" data-font="'Nanum Brush Script', cursive">글꼴D</button>
-        <button class="font-button" data-font="'Dokdo', cursive">글꼴E</button>
+        <button class="font-button" data-font="'Jua', sans-serif">글꼴E</button>
         <button class="delete-button">삭제</button>
       </div>`;
 
